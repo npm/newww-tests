@@ -4,7 +4,7 @@
   "description": "Integration tests for the npm website",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap *.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/npm/newww-tests/issues"
   },
-  "homepage": "https://github.com/npm/newww-tests#readme"
+  "homepage": "https://github.com/npm/newww-tests#readme",
+  "dependencies": {
+    "nemo": "^1.0.6",
+    "nemo-view": "^1.2.0",
+    "tap": "^1.3.2"
+  },
+  "devDependencies": {
+    "esformatter": "^0.7.3"
+  }
 }

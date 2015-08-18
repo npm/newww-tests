@@ -1,0 +1,11 @@
+{
+    "driver": {
+        "browser": "chrome"
+    },
+    "plugins": {
+        "view": {
+            "module": "nemo-view",
+            "arguments": ["path:locator"]
+        }
+    }
+}
