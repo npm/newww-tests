@@ -1,0 +1,19 @@
+{
+  "name": "newww-tests",
+  "version": "1.0.0",
+  "description": "Integration tests for the npm website",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/newww-tests.git"
+  },
+  "author": "Aria Stewart <aredridel@dinhe.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/newww-tests/issues"
+  },
+  "homepage": "https://github.com/npm/newww-tests#readme"
+}
