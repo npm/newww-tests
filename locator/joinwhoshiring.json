@@ -1,0 +1,10 @@
+{
+    "oneMonthLink": "css:#one-month",
+    "threeMonthsLink": "css:#three-months",
+    "email": "css:#email",
+    "cardNumber": "css:#card_number",
+    "ccExp": "css:#cc-exp",
+    "cvc": "css:#cc-csc",
+    "submit": "css:#submitButton",
+    "successText": "css:h2[style='color: green;']"
+}
