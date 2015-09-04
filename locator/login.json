@@ -1,0 +1,5 @@
+{
+    "name": "css:form[action='/login'] input[name='name']",
+    "password": "css:form[action='/login'] input[name='password']",
+    "loginButton": "css:form[action='/login'] input[type='submit']"
+}
