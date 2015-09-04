@@ -3,11 +3,6 @@ var urlOf = require('./lib/url');
 
 tap.test("Sign up a user", function(t) {
   require('./lib/sharedNemo').then(function(nemo) {
-    return nemo.driver.getCapabilities().then(function(caps) {
-      t.pass("Nemo successfully launched " + caps.caps_.browserName);
-      return nemo;
-    })
-  }).then(function(nemo) {
     nemo.driver.get(urlOf('/'));
     nemo.view.signup.signupLink().click();
     nemo.view.signup.usernameWaitVisible().sendKeys('test' + Date.now());
