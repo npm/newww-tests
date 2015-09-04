@@ -1,5 +1,4 @@
 {
-    "signupLink": "css:a[href='/signup']",
     "username": "css:#name",
     "password": "css:#password",
     "verify": "css:#verify",
