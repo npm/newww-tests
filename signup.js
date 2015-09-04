@@ -1,4 +1,5 @@
 var tap = require('tap');
+var urlOf = require('./lib/url');
 
 tap.test("Sign up a user", function(t) {
   require('./lib/sharedNemo').then(function(nemo) {
@@ -7,7 +8,7 @@ tap.test("Sign up a user", function(t) {
       return nemo;
     })
   }).then(function(nemo) {
-    nemo.driver.get(process.env.NPM_SELENIUM_URL || 'https://staging.npmjs.com');
+    nemo.driver.get(urlOf('/'));
     nemo.view.signup.signupLink().click();
     nemo.view.signup.usernameWaitVisible().sendKeys('test' + Date.now());
     nemo.view.signup.password().sendKeys('test123');

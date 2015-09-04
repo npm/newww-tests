@@ -1,6 +1,7 @@
 var Nemo = require('nemo');
 
 var tap = require('tap');
+var urlOf = require('./lib/url.js');
 
 var nemo = Nemo(__dirname, function(err) {
   tap.error(err);
@@ -13,7 +14,7 @@ var nemo = Nemo(__dirname, function(err) {
     tap.error(err);
   }).then(function() {
     tap.test("Pay for one month of who's hiring", function(t) {
-      nemo.driver.get('https://staging.npmjs.com/joinwhoshiring');
+      nemo.driver.get(urlOf('/joinwhoshiring'));
       nemo.view.joinwhoshiring.oneMonthLink().click();
       nemo.driver.switchTo().frame("stripe_checkout_app");
       nemo.view.joinwhoshiring.emailWaitVisible().sendKeys('test' + Date.now() + '@npmjs.com');
@@ -35,7 +36,7 @@ var nemo = Nemo(__dirname, function(err) {
     });
 
     tap.test("Pay for three months of who's hiring", function(t) {
-      nemo.driver.get('https://staging.npmjs.com/joinwhoshiring');
+      nemo.driver.get(urlOf('/joinwhoshiring'));
       nemo.view.joinwhoshiring.threeMonthsLink().click();
       nemo.driver.switchTo().frame("stripe_checkout_app");
       nemo.view.joinwhoshiring.emailWaitVisible().sendKeys('test' + Date.now() + '@npmjs.com');
