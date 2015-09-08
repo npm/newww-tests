@@ -1,3 +1,7 @@
 {
-    "billing": "css:a[href='/settings/billing']"
+    "billing": "css:a[href='/settings/billing']",
+    "signupLink": "css:a[href='/signup']",
+    "loginLink": "css:a[href='/login']",
+    "logoutLink": "css:form[action='/logout'] button",
+    "username": "css:.username a"
 }
