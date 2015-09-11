@@ -8,7 +8,9 @@ require('./lib/sharedNemo').then(function(nemo) {
   require('./signup');
   require('./logout');
 
-  tap.test('join beta', function(t) {
+  tap.test('join beta', {
+    bail: true
+  }, function(t) {
     return P.all([
       nemo.driver.get(urlOf('/orgs?join-beta')),
       nemo.view.login.nameWaitVisible(),
@@ -17,9 +19,6 @@ require('./lib/sharedNemo').then(function(nemo) {
       nemo.view.login.loginButton().click(),
       nemo.view.nav.usernameWaitVisible(),
       nemo.view.org.bannerInfoTextEquals('Organizations are here!')
-    ]).then(t.ok).catch(function(error) {
-      t.error(error);
-      t.bailout();
-    }).then(t.end);
+    ]).then(t.ok).catch(t.error).then(t.end);
   });
 });
