@@ -4,7 +4,7 @@
   "description": "Integration tests for the npm website",
   "main": "index.js",
   "scripts": {
-    "test": "tap *.js"
+    "test": "tap -t60 *.js"
   },
   "repository": {
     "type": "git",
