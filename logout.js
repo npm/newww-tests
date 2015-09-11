@@ -2,6 +2,8 @@ var tap = require('tap');
 var urlOf = require('./lib/url');
 var P = require('bluebird');
 
+require('./signup');
+
 tap.test("Log out a user", function(t) {
   require('./lib/sharedNemo').then(function(nemo) {
     return P.all([
