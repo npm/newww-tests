@@ -1,2 +1,9 @@
 {
+    "cardNumber": "css:#card-number",
+    "cardCVC": "css:#card-cvc",
+    "cardExpMonth": "css:#card-exp-month",
+    "cardExpYear": "css:#card-exp-year",
+    "coupon": "css:#coupon",
+    "submit": "css:#payment-form input[type=submit]",
+    "notice": "css:.update-notice"
 }
