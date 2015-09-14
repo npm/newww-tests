@@ -1,0 +1,12 @@
+{
+    "firstname": "css:#npme-signup-form [name=firstname]",
+    "lastname": "css:#npme-signup-form [name=lastname]",
+    "email": "css:#npme-signup-form [name=email]",
+    "phone": "css:#npme-signup-form [name=phone]",
+    "company": "css:#npme-signup-form [name=company]",
+    "numemployees": "css:#npme-signup-form [name=numemployees]",
+    "submit": "css:#npme-signup-form input[type=submit]",
+    "agreement": "css:[name=agree]",
+    "submitAgreement": "css:input[type=submit][value='Agree to license']",
+    "h2": "css:.content h2"
+}
