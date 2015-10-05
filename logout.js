@@ -10,7 +10,11 @@ tap.test("Log out a user", function(t) {
       nemo.driver.get(urlOf('/')),
       nemo.view.nav.logoutLink().click(),
       nemo.view.nav.loginLinkWaitVisible()
-    ]).then(t.ok);
+    ]).then(t.ok).then(function() {
+      if (!module.parent) {
+        nemo.driver.quit();
+      }
+    });
   }).catch(function(error) {
     t.error(error);
     t.bailout();

@@ -31,4 +31,12 @@ require('./lib/sharedNemo').then(function(nemo) {
       }).then(t.pass)
     ]).catch(t.error).then(t.end);
   })
+
+  tap.test('close driver', function(t) {
+    if (!module.parent) {
+      nemo.driver.quit();
+    }
+    t.end();
+  });
+
 }).catch(tap.error).then(tap.end);

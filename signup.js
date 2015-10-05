@@ -19,6 +19,10 @@ tap.test("Sign up a user", function(t) {
       t.ok(text, 'username is shown');
       nemo.state.username = text;
       t.pass("signed up " + text);
+    }).then(function() {
+      if (!module.parent) {
+        return nemo.driver.quit();
+      }
     });
   }).catch(function(error) {
     t.error(error);
