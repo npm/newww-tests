@@ -1,0 +1,16 @@
+{
+  "fullname": "css: #fullname",
+  "orgScope": "css: #orgScope",
+  "h1": "css: h1",
+  "hintBlock": "css: .hint-block",
+  "transferLink": "css: .hint-block a",
+  "newUserInput": "css: #new-user",
+  "createOrgFormSubmit": "css: #create-org-form button[type=submit]",
+  "paymentFormSubmit": "css: #payment-form [type=submit]",
+  "transferSubmit": "css: #transfer-username-form button[type=submit]",
+  "cardNumber": "css: #card-number",
+  "cardCVC": "css: #card-cvc",
+  "cardExpMonth": "css: #card-exp-month",
+  "cardExpYear": "css: #card-exp-year",
+  "orgInfoFirstUsername": "css: .org-users tbody tr:first-child .name .username"
+}
