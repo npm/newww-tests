@@ -8,7 +8,7 @@ require('./lib/sharedNemo').then(function(nemo) {
     bail: true
   }, function(t) {
     return P.all([
-      nemo.driver.get(urlOf('/enterprise')),
+      nemo.driver.get(urlOf('/onsite')),
       nemo.view.onsite.firstnameWaitVisible().then(pass(t, "form field visible")),
       nemo.view.onsite.firstname().sendKeys("Boops"),
       nemo.view.onsite.lastname().sendKeys("boops"),
