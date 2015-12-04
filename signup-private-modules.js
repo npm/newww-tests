@@ -18,6 +18,10 @@ require('./lib/sharedNemo').then(function(nemo) {
       nemo.view.billing.cardCVC().sendKeys("513"),
       nemo.view.billing.submit().click(),
       nemo.view.billing.noticeWaitVisible()
-    ]).then(t.ok).catch(t.error).then(t.end);
+    ]).then(function() {
+      if (!module.parent) {
+        return nemo.driver.quit();
+      }
+    }).catch(t.error).then(t.end);
   });
 });

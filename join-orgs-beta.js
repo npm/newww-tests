@@ -19,6 +19,10 @@ require('./lib/sharedNemo').then(function(nemo) {
       nemo.view.login.loginButton().click(),
       nemo.view.nav.usernameWaitVisible(),
       nemo.view.org.bannerInfoTextEquals('Organizations are here!')
-    ]).then(t.ok).catch(t.error).then(t.end);
+    ]).then(function() {
+      if (!module.parent) {
+        nemo.driver.quit();
+      }
+    }).catch(t.error).then(t.end);
   });
 });

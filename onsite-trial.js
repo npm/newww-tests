@@ -22,6 +22,10 @@ require('./lib/sharedNemo').then(function(nemo) {
       nemo.view.onsite.submitAgreement().click(),
       nemo.view.onsite.h2WaitVisible(),
       nemo.view.onsite.h2TextEquals('time to check your email').then(pass(t, 'confirmation found'))
-    ]).then(t.ok).catch(t.error).then(t.end);
+    ]).then(function() {
+      if (!module.parent) {
+        return nemo.driver.quit();
+      }
+    }).catch(t.error).then(t.end);
   });
 });
