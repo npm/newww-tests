@@ -2,6 +2,7 @@
   "fullname": "css: #human-name",
   "orgScope": "css: #orgScope",
   "h1": "css: h1",
+  "h2": "css: h2",
   "hintBlock": "css: .hint-block",
   "transferLink": "css: .hint-block a",
   "newUserInput": "css: #new-user",
