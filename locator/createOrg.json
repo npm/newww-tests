@@ -13,5 +13,6 @@
   "cardCVC": "css: #card-cvc",
   "cardExpMonth": "css: #card-exp-month",
   "cardExpYear": "css: #card-exp-year",
-  "orgInfoFirstUsername": "css: .org-users tbody tr:first-child .name .username"
+  "membersTab": "css: .nav .members",
+  "orgInfoFirstUsername": "css: .org-users tbody tr:first-child .name"
 }

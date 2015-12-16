@@ -12,7 +12,7 @@ require('./lib/sharedNemo').then(function(nemo) {
   }, function(t) {
     return P.all([
       nemo.driver.get(urlOf('/org/create')),
-      nemo.view.createOrg.h1TextEquals('Create an Org').then(pass(t, "Got to the right page")),
+      nemo.view.createOrg.h1TextEquals('Create an Organization').then(pass(t, "Got to the right page")),
       nemo.view.createOrg.fullnameWaitVisible().then(pass(t, "Found form field")),
       nemo.view.createOrg.fullname().sendKeys(nemo.state.desiredUsername + "-org"),
       nemo.view.createOrg.orgScope().sendKeys(nemo.state.desiredUsername),
@@ -41,9 +41,11 @@ require('./lib/sharedNemo').then(function(nemo) {
       ])
     }).then(function() {
       return P.all([
+        nemo.view.createOrg.membersTabWaitVisible().then(pass(t, "Org members page navigated to")),
+        nemo.view.createOrg.membersTab().click(),
         nemo.view.createOrg.orgInfoFirstUsernameWaitVisible().then(pass(t, "Username visible")),
         nemo.view.nav.username().getText().then(textEquals(t, nemo.state.desiredUsername + '-admin')).then(pass(t, "Username changed")),
-        nemo.view.createOrg.h1TextEquals(nemo.state.desiredUsername).then(pass(t, "Org name matches username")),
+        nemo.view.createOrg.h1TextEquals('@' + nemo.state.desiredUsername).then(pass(t, "Org name matches username")),
         nemo.view.createOrg.orgInfoFirstUsernameWaitVisible().then(pass(t, "Username visible")),
         nemo.view.createOrg.orgInfoFirstUsername().getText().then(function(text) {
           t.equal(nemo.state.desiredUsername + "-admin", text);
