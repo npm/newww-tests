@@ -4,7 +4,8 @@
   "description": "Integration tests for the npm website",
   "main": "index.js",
   "scripts": {
-    "test": "tap -t60 *.js"
+    "test": "tap -t60 *.js",
+    "browserstack": "NODE_ENV=browserstack tap -t60 *.js"
   },
   "repository": {
     "type": "git",
