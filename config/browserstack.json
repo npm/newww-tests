@@ -1,0 +1,12 @@
+{
+  "driver": {
+    "server": "http://hub.browserstack.com/wd/hub",
+    "serverCaps": {
+      "browser" : "Chrome",
+      "browserstack.user" : "INSERTUSERNAMEHERE",
+      "browserstack.key" : "INSERTKEYHERE",
+      "os": "OS X",
+      "os_version": "Yosemite"
+    }
+  }
+}
