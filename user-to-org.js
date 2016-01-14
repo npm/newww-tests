@@ -45,7 +45,7 @@ require('./lib/sharedNemo').then(function(nemo) {
         nemo.view.createOrg.membersTab().click(),
         nemo.view.createOrg.orgInfoFirstUsernameWaitVisible().then(pass(t, "Username visible")),
         nemo.view.nav.username().getText().then(textEquals(t, nemo.state.desiredUsername + '-admin')).then(pass(t, "Username changed")),
-        nemo.view.createOrg.h1TextEquals('@' + nemo.state.desiredUsername).then(pass(t, "Org name matches username")),
+        nemo.view.createOrg.billingHeaderTextEquals('@' + nemo.state.desiredUsername).then(pass(t, "Org name matches username")),
         nemo.view.createOrg.orgInfoFirstUsernameWaitVisible().then(pass(t, "Username visible")),
         nemo.view.createOrg.orgInfoFirstUsername().getText().then(function(text) {
           t.equal(nemo.state.desiredUsername + "-admin", text);
