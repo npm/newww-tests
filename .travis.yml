@@ -1,0 +1,20 @@
+sudo: false
+language: node_js
+node_js:
+  - "4.2"
+  - "5"
+services:
+  - redis-server
+env:
+  - SESSION_SALT="some_random_salt_for_this_session_thing_yay" MAIL_ACCESS_KEY_ID="some_AWS_access_key_id" MAIL_SECRET_ACCESS_KEY="some_AWS_secret_access_key" CXX=g++-4.8 CC=gcc-4.8
+notifications:
+  email: false
+before_install:
+  - "npm install -g npm@latest"
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8
