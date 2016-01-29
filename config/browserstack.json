@@ -3,8 +3,8 @@
     "server": "http://hub.browserstack.com/wd/hub",
     "serverCaps": {
       "browser" : "Chrome",
-      "browserstack.user" : "INSERTUSERNAMEHERE",
-      "browserstack.key" : "INSERTKEYHERE",
+      "browserstack.user" : "env:BROWSERSTACK_USER",
+      "browserstack.key" : "env:BROWSERSTACK_KEY",
       "os": "OS X",
       "os_version": "Yosemite"
     }
